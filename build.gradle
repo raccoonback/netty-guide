@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group = 'study'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'io.netty', name: 'netty-all', version: '4.1.113.Final'
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
